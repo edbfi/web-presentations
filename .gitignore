@@ -1,0 +1,19 @@
+# Generated files at any project depth
+node_modules/
+dist/
+build/
+.svelte-kit/
+.astro/
+.next/
+.cache/
+coverage/
+output/
+*.tsbuildinfo
+*.log
+
+# Local configuration and credentials
+.env
+.env.*
+!.env.example
+.DS_Store
+.idea/
