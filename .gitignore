@@ -17,3 +17,7 @@ output/
 !.env.example
 .DS_Store
 .idea/
+
+# Browser smoke evidence is retained by CI on failure.
+**/test-results/
+**/playwright-report/

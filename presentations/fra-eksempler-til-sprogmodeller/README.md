@@ -5,7 +5,7 @@ En lokal, oplægsholderstyret webdokumentar. Prototypen dækker de første dele 
 ## Kør lokalt
 
 ```sh
-bun install
+bun install --frozen-lockfile
 bun run dev
 ```
 
@@ -18,6 +18,17 @@ bun run preview
 ```
 
 Siden kræver en lokal HTTP-server; åbn ikke `dist/index.html` direkte som en fil. Efter installationen ligger alle nødvendige fonte og scripts lokalt. Kun kildelinks kræver internet.
+
+## Browser-smoke
+
+```sh
+bun run check
+bun run build
+bun run smoke:install
+bun run test:smoke
+```
+
+Playwright starter det byggede site lokalt og kontrollerer indlæsning samt oplægsholderens navigation med og uden reduceret bevægelse. Dependencies og lockfil forbliver i denne projektmappe.
 
 ## Styring
 
