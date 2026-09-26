@@ -2,7 +2,7 @@
 
 ## Commands (run from this directory)
 
-- Install: `bun install --frozen-lockfile` (Bun 1.4.2, per `packageManager` and CI).
+- Install: `bun install --frozen-lockfile` (Bun 1.4.2, per `packageManager`).
 - Typecheck: `bun run check` (svelte-check). It covers `src/` and `vite.config.ts` only; `smoke/` and `playwright.config.ts` are outside `tsconfig.json` `include`, so type errors there surface only when Playwright runs.
 - Smoke tests serve the production build (`vite preview` on port 4177, `--strictPort`, `reuseExistingServer: false`). Always `bun run build` first, or they test a stale `dist/`; free port 4177 first or the web server fails to start.
   - All: `bun run test:smoke` (once: `bun run smoke:install`)

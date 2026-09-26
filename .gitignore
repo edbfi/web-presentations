@@ -18,6 +18,6 @@ output/
 .DS_Store
 .idea/
 
-# Browser smoke evidence is retained by CI on failure.
+# Playwright browser smoke test output.
 **/test-results/
 **/playwright-report/
