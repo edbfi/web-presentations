@@ -10,11 +10,11 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 ## Adding a presentation
 
 1. Create `presentations/<name>/` with its own manifest, lockfile and a short `README.md`.
-2. Add a job to `.github/workflows/ci.yml` modelled on the `presentation` job (the reusable `edbfi/automation/.github/workflows/bun.yml` takes `install-directory`, `working-directory` and `command`).
-3. Add the new job id to the `required` job's `needs:` list and to its gate `required:` input. A job missing from `needs` is not enforced by `ci / required`.
-4. List it under "Præsentationer" in the root `README.md`.
+2. Run the presentation’s check and build scripts locally.
+3. List it under "Præsentationer" in the root `README.md`.
 
 ## Commits and PRs
 
-- The PR policy (`.github/workflows/policy.yml`, reusable workflow in `edbfi/automation`) checks commit sign-off and the PR title: use `git commit -s` and a Conventional Commit title.
 - License is `AGPL-3.0-only`; new `package.json` files carry `"license": "AGPL-3.0-only"`.
+
+Use `git commit -s` and Conventional Commit titles.
