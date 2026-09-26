@@ -1,0 +1,20 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "github>edbfi/automation//default.json#v4.1.1",
+    "github>edbfi/automation//automerge.json#v4.1.1"
+  ],
+  "description": "Renovate manages only the edbfi/automation references here (owner decision, 2026-09-26); they merge once required CI passes.",
+  "lockFileMaintenance": {
+    "enabled": false
+  },
+  "packageRules": [
+    {
+      "description": "Every other dependency stays as pinned in each presentation.",
+      "matchPackageNames": [
+        "!edbfi/automation"
+      ],
+      "enabled": false
+    }
+  ]
+}
