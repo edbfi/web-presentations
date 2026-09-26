@@ -9,7 +9,7 @@
   - One file: `bun run test:smoke smoke/startup.spec.ts`
   - One case: `bun run test:smoke -g "preserves presenter navigation"`
   - One project: `bun run test:smoke --project=reduced-motion` (projects: `chromium`, `reduced-motion`)
-- CI runs `bun run check && bun run build && bun run smoke:install --with-deps && bun run test:smoke`.
+- Full local check: `bun run check && bun run build && bun run smoke:install --with-deps && bun run test:smoke`.
 - Keep `typescript` at `~6`; the installed svelte-check requires it (see `README.md`).
 
 ## How a step is wired
